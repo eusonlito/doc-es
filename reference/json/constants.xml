@@ -136,6 +136,32 @@
     </para>
    </listitem>
   </varlistentry>
+  <varlistentry xml:id="constant.json-error-invalid-property-name">
+   <term>
+    <constant>JSON_ERROR_INVALID_PROPERTY_NAME</constant>
+    (<type>integer</type>)
+   </term>
+   <listitem>
+    <para>
+     Se ha usado una clave que empieza con el caracter \u0000 en la cadena
+     de texto pasada a <function>json_encode()</function> al decodificar
+     un objeto JSON en un objeto PHP.
+    </para>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.json-error-utf16">
+   <term>
+    <constant>JSON_ERROR_UTF16</constant>
+    (<type>integer</type>)
+   </term>
+   <listitem>
+    <para>
+     Un único sustituto UTF-16 no emparejado en una secuencia de escape
+     unicode contenida en la cadena JSON pasada a
+     <function>json_encode()</function>.
+    </para>
+   </listitem>
+  </varlistentry>
  </variablelist>
  
  <para>
@@ -226,6 +252,19 @@
     <simpara>
      Codifica integer grandes como su valor del string original.
      Disponible desde PHP 5.4.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.json-object-as-array">
+   <term>
+    <constant>JSON_OBJECT_AS_ARRAY</constant>
+    (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Decodifica objetos JSON como arrays de PHP. Esta opción se puede
+     añadir automáticamente llamando a <function>json_decode()</function> con el segundo
+     parámetro igual a &true;
     </simpara>
    </listitem>
   </varlistentry>
@@ -349,6 +388,18 @@
      <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant> tiene prioridad sobre
      <constant>JSON_THROW_ON_ERROR</constant>.
      Disponible desde PHP 7.3.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="onstant.json-error-non-backed-enum">
+   <term>
+    <constant>JSON_ERROR_NON_BACKED_ENUM</constant>
+    (<type>int</type>)
+   </term>
+   <listitem>
+    <simpara>
+     El valor pasado a <function>json_encode</function> incluye un enum
+     no respaldado que no se puede serializar. Disponible desde PHP 8.1.0.
     </simpara>
    </listitem>
   </varlistentry>
